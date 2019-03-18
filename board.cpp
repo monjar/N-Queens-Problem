@@ -20,6 +20,6 @@ std::vector<Cell<int>> &Board::operator[]( const int &row ) {
 	return cells[row];
 }*/
 
-std::vector<CellTest> &Board::operator[]( const int &row ) {
+std::vector<Cell> &Board::operator[]( const int &row ) {
 	return cells[row];
 }

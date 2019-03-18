@@ -4,8 +4,7 @@
 
 #include <vector>
 
-//#include "cell.h"
-#include "celltest.h"
+#include "cell.h"
 
 class Board { 
 
@@ -13,7 +12,7 @@ class Board {
 
 		//Cell<int> **cells;
 		//std::vector<std::vector<Cell<int>>> cells;
-		std::vector<std::vector<CellTest>> cells;
+		std::vector<std::vector<Cell>> cells;
 
 	public:
 
@@ -24,7 +23,7 @@ class Board {
 		//~Board();
 
 		//std::vector<Cell<int>> &operator[]( const int& );
-		std::vector<CellTest> &operator[]( const int& );
+		std::vector<Cell> &operator[]( const int& );
 
 };
 

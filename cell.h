@@ -2,26 +2,24 @@
 #ifndef __CELL_H
 #define __CELL_H
 
-template <class T> 
-class Cell {
+class Cell{ 
 
-	private:
+    private:
 
-		T *value;
+		int *value;
 		//std::unique_ptr<T> value;
 	
 	public:
 
-		Cell( const T& );
+		Cell( const int& );
 		Cell();
 		Cell( const Cell& );
 		~Cell();
 
-		const T &getValue() const;
+		const int &getValue() const;
 
-		void setValue( const T& );
+		void setValue( const int& );
 
 };
 
 #endif
-

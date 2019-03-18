@@ -1,35 +1,26 @@
 
 #include "cell.h"
 
-template <class T> 
-Cell<T>::Cell( const T& value ) { 
-	this->value = new T;
-	//value = std::make_unique<T>();
-	setValue( value );
+Cell::Cell( const int &value ) {
+    this->value = new int( value );
 }
 
-template <class T>
-Cell<T>::Cell() { 
-	Cell( 0 );
+Cell::Cell() {
+    Cell( 0 );
 }
 
-template <class T>
-Cell<T>::Cell( const Cell<T> &temp ) {
-	setValue( temp.getValue() );
+Cell::Cell( const Cell &cell ) {
+    setValue( cell.getValue() );
 }
 
-template <class T>
-Cell<T>::~Cell() { 
-	delete value;
+Cell::~Cell() {
+    delete value;
 }
 
-template <class T>
-const T &Cell<T>::getValue() const { 
-	return *value;
+const int &Cell::getValue() const { 
+    return *value;
 }
 
-template <class T>
-void Cell<T>::setValue( const T& value ) { 
-	*(this->value) = value;
+void Cell::setValue( const int &value ) {
+    *(this->value) = value;
 }
-
