@@ -7,12 +7,15 @@ class Cell {
 
 	private:
 
-		T value;
+		T *value;
+		//std::unique_ptr<T> value;
 	
 	public:
 
 		Cell( const T& );
 		Cell();
+		Cell( const Cell& );
+		~Cell();
 
 		const T &getValue() const;
 
