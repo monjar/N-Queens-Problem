@@ -9,6 +9,6 @@ board.o: cell.o board.h board.cpp
 cell.o: cell.h cell.cpp
 	g++ -c cell.cpp
 open:
-	vim -p main.cpp game.h game.cpp board.h board.cpp solver.h solver.cpp solveMethod.h solveMethod.cpp cell.h cell.cpp Makefile
+	code main.cpp game.h game.cpp board.h board.cpp solver.h solver.cpp solveMethod.h solveMethod.cpp cell.h cell.cpp Makefile
 clean:
 	rm -rf *.o NQueen
