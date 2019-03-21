@@ -1,13 +1,15 @@
 run: all
-	./NQueen
+	gdb -q NQueen
 all: main.o
-	g++ main.o game.o board.o cell.o cor.o -o NQueen -Wall -g -O2 -std=c++11
+	g++ main.o game.o nqueenboard.o board.o cell.o cor.o -o NQueen -Wall -g -O2 -std=c++11
 main.o: game.o main.cpp
 	g++ -c main.cpp
-game.o: cor.o board.o game.h game.cpp
+game.o: cor.o nqueenboard.o game.h game.cpp
 	g++ -c game.cpp
 cor.o: cor.h cor.cpp
 	g++ -c cor.cpp
+nqueenboard.o: cor.o board.o nqueenboard.h nqueenboard.cpp
+	g++ -c nqueenboard.cpp
 board.o: cell.o board.h board.cpp
 	g++ -c board.cpp
 cell.o: cell.h cell.cpp

@@ -7,7 +7,6 @@ class Cell{
     private:
 
 		int *value;
-		//std::unique_ptr<T> value;
 	
 	public:
 

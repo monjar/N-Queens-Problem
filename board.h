@@ -4,27 +4,25 @@
 
 #include <iostream>		//cout, for debugging
 #include <vector>		//vector
+#include <utility>		//pair, make_pair
 
 #include "cell.h"
 
 class Board { 
 
-	private:
+	protected:
 
-		//Cell<int> **cells;
-		//std::vector<std::vector<Cell<int>>> cells;
 		std::vector<std::vector<Cell*>> cells;
 
 	public:
 
-		const static int EMPTY_CELL;
-		const static int QUEEN_CELL;
+		Board( const unsigned int&, const unsigned int&, const int& );
 
-		Board( const int& );
-		//~Board();
-
-		//std::vector<Cell<int>> &operator[]( const int& );
 		std::vector<Cell*> &operator[]( const int& );
+
+		const std::pair<size_t, size_t> getSize() const;
+		const size_t getRowsCount() const;
+		const size_t getColumnsCount() const;
 
 };
 

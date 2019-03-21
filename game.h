@@ -1,4 +1,8 @@
 
+/*
+The main purpose of this class is to have the game board inside it. It can do some stuff on it too. 
+*/
+
 #ifndef __GAME_H
 #define __GAME_H
 
@@ -9,26 +13,25 @@
 #include <algorithm>	//shuffle
 #include <random>		//default_random_engine
 
-#include "board.h"
 #include "cor.h"
+#include "nqueenboard.h"
 
 class Game { 
 
 	private:
 
-		Board *board;
-		size_t *size;
+		//Board *board;
+		NQueenBoard *board;
 	
 	public:
 
 		Game( const int& );
+		Game( const int&, const int&, const unsigned int& );
 		~Game();
 
 		void initializeRandomlyInEachColumn();
 		void initializeRandomlyInEachRow();
 		void initializeRandomly();
-
-		const size_t &getSize() const;
 
 };
 

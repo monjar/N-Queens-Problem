@@ -10,7 +10,7 @@ Cell::Cell() {
 }
 
 Cell::Cell( const Cell &cell ) {
-    setValue( cell.getValue() );
+    this->value = new int( cell.getValue() );
 }
 
 Cell::~Cell() {
