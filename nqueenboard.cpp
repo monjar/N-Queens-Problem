@@ -18,12 +18,21 @@ const unsigned int &NQueenBoard::getQueensCount() const {
 }
 
 std::vector<Cor> NQueenBoard::getCellsMatchingValue( const int &value ) {
+
     std::vector<Cor> returnValue;
-    for ( unsigned int i = 0; i < this->getRowsCount(); i++ ) 
+
+    for ( unsigned int i = 0; i < this->getRowsCount(); i++ ) {
+
         for ( unsigned int j = 0; j < this->getColumnsCount(); j++ ) {
+
             Cell currentCell = *( this->cells[i].at(j) );
             if ( currentCell.getValue() == value )
                 returnValue.push_back( Cor( i, j ) );
+
         }
+        
+    }
+
     return returnValue;
+
 }

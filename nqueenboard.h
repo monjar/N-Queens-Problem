@@ -1,8 +1,12 @@
 
+/*
+The purpose of this class is to have a general board. It specializes the board for N Queens problem with adding some extra features to it. 
+*/
+
 #ifndef __NQUEENBOARD_H
 #define __NQUEENBOARD_H
 
-#include <vector>
+#include <vector>		//vector
 
 #include "board.h"
 #include "cor.h"
@@ -11,21 +15,21 @@ class NQueenBoard : public Board{
 
     private:
 
-        const unsigned int queensCount;
+        const unsigned int queensCount;		//	Number of queens
 
-        std::vector<Cor> emptyCellsCor;
-        std::vector<Cor> queenCellsCor;
+        std::vector<Cor> emptyCellsCor;		//	This vector contains cordinates of all empty cells. it can be useful later. 
+        std::vector<Cor> queenCellsCor;		//	This vector contains cordinates of all queen cells. it can be useful later. 
 
     public:
 
-        const static int EMPTY_CELL;
-        const static int QUEEN_CELL;
+        const static int EMPTY_CELL;		//
+        const static int QUEEN_CELL;		//	To prevent hard code, I created these two variables. 
 
-        NQueenBoard( const unsigned int&, const unsigned int&, const unsigned int& );
+        NQueenBoard( const unsigned int&, const unsigned int&, const unsigned int& );		//	Gets number of rows, number of columns, and number of queens.
 
-        std::vector<Cor> getCellsMatchingValue( const int& );
+        std::vector<Cor> getCellsMatchingValue( const int& );		//	Gets a number, and returns cordinates of all cells that have the given value.
 
-        const unsigned int &getQueensCount() const;
+        const unsigned int &getQueensCount() const;		//	Getter for queensCount field.
 
 };
 

@@ -14,7 +14,7 @@ Game::~Game(){
 
 void Game::initializeRandomlyInEachColumn() {
 	if ( board->getQueensCount() > board->getColumnsCount() )
-		throw "Can't put one queen in each column! Exiting...";
+		throw "Can't put one queen in each column! Exiting.";
 	for ( int i = 0; i < board->getQueensCount(); i++ ) {
 		int temp = rand() % board->getRowsCount();
 		(*board)[temp][i]->setValue( NQueenBoard::QUEEN_CELL );
@@ -23,7 +23,7 @@ void Game::initializeRandomlyInEachColumn() {
 
 void Game::initializeRandomlyInEachRow() {
 	if ( board->getQueensCount() > board->getRowsCount() )
-		throw "Can't put one queen in each row! Exiting...";
+		throw "Can't put one queen in each row! Exiting.";
 	for ( int i = 0; i < board->getQueensCount(); i++ ) {
 		int temp = rand() % board->getColumnsCount();
 		(*board)[i][temp]->setValue( NQueenBoard::QUEEN_CELL );
@@ -33,7 +33,7 @@ void Game::initializeRandomlyInEachRow() {
 void Game::initializeRandomly() {
 	
 	if ( board->getQueensCount() > board->getRowsCount() * board->getColumnsCount() )
-		throw "Number of queens is more that number of cells! exiting...";
+		throw "Number of queens is more that number of cells! Exiting.";
 
 	std::vector<Cor> allCells;
 	for ( int i = 0; i < board->getRowsCount(); i++ ) 
@@ -41,7 +41,7 @@ void Game::initializeRandomly() {
 			Cor temp( i, j );
 			allCells.push_back( temp );
 		}
-		
+
 	std::shuffle( allCells.begin(), allCells.end(), std::default_random_engine( time( NULL ) ) );
 	
 	for ( int i = 0; i < board->getQueensCount(); i++ )
