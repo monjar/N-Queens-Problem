@@ -3,26 +3,30 @@
 
 //template <class T>
 Cor::Cor( const int &x, const int &y ) {
+    //std::cout << "passed x and y to constructor: " << x << ' ' << y << std::endl;
     setCor( x, y );
 }
 
 //template <class T>
 Cor::Cor( const int &xy ) {
-    Cor( xy, xy );
+    setCor( xy, xy );
 }
 
 //template <class T>
 Cor::Cor( const Cor &cor ) {
-    Cor( cor.getX(), cor.getY() );
+    //std::cout << "In copy constructor!" << std::endl;
+    setCor( cor.getX(), cor.getY() );
+    //std::cout << "In copy constructor: " << cor.getX() << ' ' << this->getX() << "    " << cor.getY() << ' ' << this->getY() << std::endl;
 }
 
 //template <class T>
 Cor::Cor() {
-    Cor( 0, 0 );
+    setCor( 0, 0 );
 }
 
 //template <class T>
 void Cor::setCor( const int &x, const int &y ) {
+    //std::cout << "passed x and y to setter: " << x << ' ' << y << std::endl;
     setX( x );
     setY( y );
 }
@@ -46,11 +50,13 @@ void Cor::resetCor() {
 
 //template <class T>
 void Cor::setX( const int &x ) {
+    //std::cout << "passed x to x setter: " << x << std::endl;
     this->x = x;
 }
 
 //template <class T>
 void Cor::setY( const int &y ) {
+    //std::cout << "passed y to y setter: " << y << std::endl;
     this->y = y;
 }
 

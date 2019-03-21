@@ -2,6 +2,7 @@
 #ifndef __GAME_H
 #define __GAME_H
 
+#include <iostream>		//cout, for debugging
 #include <stdlib.h>		//srand(), rand()
 #include <time.h>		//time()
 #include <vector>		//vector!

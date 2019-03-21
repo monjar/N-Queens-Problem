@@ -2,7 +2,8 @@
 #ifndef __BOARD_H
 #define __BOARD_H
 
-#include <vector>
+#include <iostream>		//cout, for debugging
+#include <vector>		//vector
 
 #include "cell.h"
 
@@ -12,7 +13,7 @@ class Board {
 
 		//Cell<int> **cells;
 		//std::vector<std::vector<Cell<int>>> cells;
-		std::vector<std::vector<Cell>> cells;
+		std::vector<std::vector<Cell*>> cells;
 
 	public:
 
@@ -23,7 +24,7 @@ class Board {
 		//~Board();
 
 		//std::vector<Cell<int>> &operator[]( const int& );
-		std::vector<Cell> &operator[]( const int& );
+		std::vector<Cell*> &operator[]( const int& );
 
 };
 

@@ -7,7 +7,7 @@ main.o: game.o main.cpp
 game.o: cor.o board.o game.h game.cpp
 	g++ -c game.cpp
 cor.o: cor.h cor.cpp
-	g++ -c cor.cpp 
+	g++ -c cor.cpp
 board.o: cell.o board.h board.cpp
 	g++ -c board.cpp
 cell.o: cell.h cell.cpp

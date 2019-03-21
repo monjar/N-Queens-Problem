@@ -2,6 +2,8 @@
 #ifndef __COR_H
 #define __COR_H
 
+#include <iostream>		//cout for debugging
+
 //template <class T>
 class Cor { 
 
