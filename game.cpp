@@ -48,3 +48,7 @@ void Game::initializeRandomly() {
 		(*board)[allCells[i].getY()][allCells[i].getX()]->setValue( NQueenBoard::QUEEN_CELL );
 
 }
+
+NQueenBoard Game::getBoard() const {
+	return *(this->board);
+}

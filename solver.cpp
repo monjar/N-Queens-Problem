@@ -6,5 +6,5 @@ Solver::Solver( SolveMethod* solveMethod ) {
 }
 
 void Solver::solve( Game *game ) {
-    
+    this->solveMethod->solve( game );
 }

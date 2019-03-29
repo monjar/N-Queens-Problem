@@ -15,8 +15,13 @@ The main purpose of this class is to have the game board inside it. It can do so
 
 #include "cor.h"
 #include "nqueenboard.h"
+// #include "solveMethod.h"
+
+class SolveMethod;
 
 class Game { 
+
+	friend class SolveMethod;
 
 	private:
 

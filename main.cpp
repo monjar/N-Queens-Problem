@@ -14,6 +14,7 @@ int main () {
 
 	SolveMethod *method = new HillClimbingMethod;
 	Solver *solver = new Solver( method );
+	solver->solve( game );
 
 	return 0;
 
