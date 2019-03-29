@@ -2,14 +2,19 @@
 #include <iostream>
 
 #include "game.h"
+#include "hillclimbingmethod.h"
+#include "solver.h"
 
 int main () {
 
-    Game *game = new Game( 8 );
-    game->initializeRandomly();
+	Game *game = new Game( 8 );
+	game->initializeRandomly();
 
-    delete game;
+	// delete game; 
 
-    return 0;
+	SolveMethod *method = new HillClimbingMethod;
+	Solver *solver = new Solver( method );
+
+	return 0;
 
 }

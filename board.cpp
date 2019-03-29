@@ -13,8 +13,21 @@ Board::Board( const unsigned int &row, const unsigned int &column, const int &de
 	
 }
 
+Board::Board( const Board &board ) {
+	this->cells.resize( board.getRowsCount() );
+	for ( int i = 0; i < board.getRowsCount(); i++ ) {
+		this->cells[i].resize( board.getColumnsCount() );
+		for ( int j = 0; j < board.getColumnsCount(); j++ ) 
+			this->cells[i][j]->setValue( board.getCell(i, j).getValue() );
+	}
+}
+
 std::vector<Cell*> &Board::operator[]( const int &row ) {
 	return cells[row];
+}
+
+Cell Board::getCell( const int &row, const int &column ) const {
+	return *( this->cells.at( row ).at( column ) );
 }
 
 const std::pair<size_t, size_t> Board::getSize() const { 

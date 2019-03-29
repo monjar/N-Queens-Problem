@@ -13,6 +13,10 @@ NQueenBoard::NQueenBoard( const unsigned int &row, const unsigned int &column, c
     
 }
 
+NQueenBoard::NQueenBoard( const NQueenBoard &nQueenBoard )
+     : Board( nQueenBoard )
+     , queensCount( nQueenBoard.getQueensCount() ) {}
+
 const unsigned int &NQueenBoard::getQueensCount() const {
     return this->queensCount;
 }

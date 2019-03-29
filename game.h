@@ -33,6 +33,8 @@ class Game {
 		void initializeRandomlyInEachRow();
 		void initializeRandomly();
 
+		NQueenBoard getBoard() const;
+
 };
 
 #endif
