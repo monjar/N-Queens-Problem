@@ -21,6 +21,6 @@ hillclimbingmethod.o: solveMethod.o hillclimbingmethod.h hillclimbingmethod.cpp
 cell.o: cell.h cell.cpp
 	g++ -c cell.cpp 
 open:
-	code main.cpp game.h game.cpp board.h board.cpp solver.h solver.cpp solveMethod.h solveMethod.cpp cell.h cell.cpp Makefile
+	code main.cpp solver.h solver.cpp solveMethod.h solveMethod.cpp hillclimbingmethod.h hillclimbingmethod.cpp chessstuff.h chessstuff.cpp game.h game.cpp nqueenboard.h nqueenboard.cpp board.h board.cpp Makefile
 clean:
 	rm -rf *.o NQueen
