@@ -8,9 +8,9 @@ Every board consists of some cells. This class plays this role.
 
 class Cell{ 
 
-		private:
+	private:
 
-			int *value;		//	Value of the cell, obviously. 
+		int *value;		//	Value of the cell, obviously. 
 	
 	public:
 
