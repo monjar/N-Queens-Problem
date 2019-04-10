@@ -6,8 +6,6 @@
 
 class HillClimbingMethod : public SolveMethod{
 
-	private:
-
 	public:
 
 		void solve( Game* ) override; 
